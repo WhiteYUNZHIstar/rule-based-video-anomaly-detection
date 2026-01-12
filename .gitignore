@@ -6,6 +6,7 @@ venv/
 
 # Model weights
 models/*.pt
+*.pt
 
 # Logs
 logs/
