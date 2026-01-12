@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>视频异常行为检测系统</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { display:flex; gap:20px; }
+        .video { flex: 1; }
+        .panel { width: 320px; border-left: 1px solid #ddd; padding-left: 12px; }
+        .panel h3 { margin-top: 0; }
+        .config-list { list-style: none; padding: 0; }
+        .config-list li { margin: 6px 0; }
+    </style>
+</head>
+<body>
+    <h2>视频异常行为检测系统</h2>
+    <div class="container">
+        <div class="video">
+            <img src="{{ url_for('video_feed') }}" width="800">
+        </div>
+        <div class="panel">
+            <h3>当前配置</h3>
+            <ul class="config-list">
+                <li><strong>CONF_THRES:</strong> {{ config.CONF_THRES }}</li>
+                <li><strong>MIN_AREA:</strong> {{ config.MIN_AREA }}</li>
+                <li><strong>CONFIRM_THRESHOLD:</strong> {{ config.CONFIRM_THRESHOLD }}</li>
+                <li><strong>MAX_MISSED:</strong> {{ config.MAX_MISSED }}</li>
+                <li><strong>MAX_DISTANCE:</strong> {{ config.MAX_DISTANCE }}</li>
+                <li><strong>MAX_LOST_TIME:</strong> {{ config.MAX_LOST_TIME }}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
