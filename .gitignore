@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Model weights
+models/*.pt
+*.pt
+
+# Logs
+logs/
+
+# OS
+.DS_Store
+
+# IDE / editor
+.idea/
+.vscode/
+
+# Git
+.git/
